@@ -2,7 +2,7 @@
  * @Author: MIngya jin2899042558@163.com
  * @Date: 2024-07-18 15:45:53
  * @LastEditors: MIngya jin2899042558@163.com
- * @LastEditTime: 2024-07-19 09:48:10
+ * @LastEditTime: 2024-07-19 10:13:29
  * @FilePath: \Codingc:\Users\ASUS\Documents\PlatformIO\Projects\huiguang_timer\src\main.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -76,7 +76,7 @@ void loop () {
     int min_ten = now.minute() / 10;
 
     int data_hour = hour_ten * pow(2,4) + hour_one;
-    int data_min = min_ten * pow(2,4) + hour_one;
+    int data_min = min_ten * pow(2,4) + min_one;
 
     digitalWrite(latchpin, LOW);
     shiftOut(datapin, clockpin, LSBFIRST, data_hour);
