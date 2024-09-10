@@ -11,9 +11,9 @@
 #include <math.h>
 
 RTC_DS3231 rtc;
-int datapin = 2;
-int latchpin = 3;
-int clockpin = 4;
+int datapin = 2;  /*datapin = 8*/
+int latchpin = 3;  /*latchpin = 7*/
+int clockpin = 4;  /*clockpin = 6*/
 
 char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
@@ -84,5 +84,5 @@ void loop () {
     digitalWrite(latchpin, HIGH);
 
     Serial.println();
-    delay(1000);
+    delay(100);
 }
